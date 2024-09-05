@@ -2,12 +2,139 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Kapitel from "../components/Kapitel.astro";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>tester <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-  </article>
+<MainLayout title="VictoriaErSej">
+  <!-- Hero sektionen -->
+  <div class="py-10 md:grid grid-cols-2">
+    <div>
+      <img src="src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg" alt="" />
+    </div>
+    <div class="px-10 flex items-center">
+      <div class="space-y-4">
+        <h1 class="text-3xl">Københavnerbilleder - En guide til hipster foto</h1>
+        <h2 class="text-2xl italic">Af Sten Simons</h2>
+        <p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+        <Button>Køb bogen her</Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stamdata og facts -->
+  <div class="md:grid grid-cols-2 gap-4">
+    <div class="text-right">
+      <p>Titel: Københavnerbilleder - en guide til hipster foto</p>
+      <p>Forfatter: Sten Simons</p>
+      <p>Antal sider: 344</p>
+    </div>
+    <div>
+      <p>Forlag: Mellem Linjerne</p>
+      <p>ISBN: 987-6-987654-32-1</p>
+      <p>Pris: 399.-</p>
+    </div>
+  </div>
+
+  <!-- Billede sektion -->
+  <div class="md:grid grid-cols-3 md:px-40 md:gap-10 py-10">
+    <img src="src/assets/images/kobenhavnerbilleder-sten-simons.jpg" alt="" />
+    <img src="src/assets/images/kobenhavnerbilleder_oppefra.jpg" alt="" />
+    <img src="src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg" alt="" />
+  </div>
+
+  <!-- Kapitlerne -->
+  <div class="md:grid grid-cols-2 md:px-40 md:gap-10">
+    <h1 class="text-3xl">Kapitlerne</h1>
+  </div>
+  <div class="md:grid grid-cols-2 md:px-40 md:gap-10">
+    <div>
+      <Kapitel kapitel="Kapitel 1 - Intro til street foto" tekst="Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos." />
+      <Kapitel kapitel="Kapitel 2 - Om at skyde street" tekst="Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet." />
+      <Kapitel kapitel="Kapitel 3 - Om at finde det rette motiv" tekst="Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver" />
+      <Kapitel kapitel="Kapitel 4 - Digital street foto" tekst="De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto." />
+    </div>
+    <div>
+      <Kapitel kapitel="Kapitel 5 - Analog street foto" tekst="Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto." />
+      <Kapitel kapitel="Kapitel 6 - Om at skyde sort/hvid" tekst="Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. " />
+      <Kapitel kapitel="Kapitel 7 - Kreative teknikker" tekst="Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!" />
+      <Kapitel kapitel="Kapitel 8 - Kom helt tæt på!" tekst="Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…" />
+    </div>
+  </div>
+
+  <!-- Anmeldelser -->
+  <div>
+    <h2></h2>
+  </div>
+  <div class="grid grid-cols-3">
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <div>
+      <img src="" alt="" />
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Galleri -->
+  <div class="md:grid grid-cols-2 md:px-40 md:gap-10">
+    <h1 class="text-3xl">Billeder fra bogen</h1>
+  </div>
+  <div class="grid md:grid-cols-4 gap-4 mx-auto w-full max-w-6xl py-10">
+    <img src="src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/amarminoen-med-et-agfa-le-box-11.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/anamorfiske-landskaber-amager-faelled-4.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/kbh-by-night-3.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/lomo-smena-15.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/lomo-smena-17.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-14.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-16.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/pinhole-objektiver-ved-eghjorten-3.jpg" alt="hej" class="w-72 h-72" />
+    <img src="src/assets/images/vinter-2021-med-lomo-smena-6.jpg" alt="hej" class="w-72 h-72" />
+  </div>
+
+  <!-- Forfatteren -->
+  <div class="grid grid-cols-2"></div>
+  <div class="grid grid-cols-2">
+    <img src="" alt="" />
+    <p></p>
+  </div>
+
+  <!-- Forms -->
+  <div class="min-h-screen flex items-center justify-center">
+    <form class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+      <label class="block" for="fname"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="number" id="fname" name="fname" placeholder="Antal" /><br />
+
+      <label for="radio" id="check">Levering:</label>
+      <input type="radio" id="lname" name="lname" /> PostNord
+      <input type="radio" id="lname" name="lname" /> Afhent selv<br />
+
+      <label for="name"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" placeholder="Navn" /><br />
+
+      <label for="name"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" placeholder="Adresse" /><br />
+
+      <label for="name"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="email" placeholder="Email" /><br />
+
+      <label for="name"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" placeholder="Postnummer" />
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" placeholder="By" /><br />
+
+      <label for="name"></label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="tel" placeholder="Telefon" /><br />
+
+      <input class="rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="checkbox" id="lname" name="lname" /> Ja tak til nyhedsbreve og tilbud <br />
+
+      <button class="mt-4 w-full bg-blue-500 text-white p-2 rounded-md" type="submit">Fortsæt</button>
+    </form>
+  </div>
 </MainLayout>
